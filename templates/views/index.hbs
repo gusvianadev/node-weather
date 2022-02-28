@@ -1,0 +1,25 @@
+<html lang='en'>
+	<head>
+		<meta charset='UTF-8' />
+		<meta http-equiv='X-UA-Compatible' content='IE=edge' />
+		<meta name='viewport' content='width=device-width, initial-scale=1.0' />
+		<link rel='stylesheet' href='css/styles.css' />
+		<title>Web server</title>
+	</head>
+	<body>
+		{{>header}}
+		<div class="weather-form">
+			<p>Get the weather!</p>
+			<form id="search-weather-form">
+				<input type="text" placeholder="location">
+				<button type="submit">search</button>
+			</form>
+		</div>
+		<section id="forecast">
+			<h2></h2>
+			<span></span>
+		</section>
+		{{>footer}}
+	</body>
+	<script src='js/scripts.js'></script>
+</html>
