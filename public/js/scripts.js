@@ -7,9 +7,7 @@
 
 		const getWeather = async (place) => {
 			try {
-				const res = await fetch(
-					`http://localhost:3000/weather?address=${place}`
-				)
+				const res = await fetch(`weather?address=${place}`)
 
 				if (res.ok) {
 					const data = await res.json()

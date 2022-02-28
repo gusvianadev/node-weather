@@ -6,9 +6,11 @@ import getGeocoding from './utils/getGeocoding.js'
 import getWeather from './utils/getWeather.js'
 
 const app = express()
+const port = process.env.PORT || 3000
+
 const publicDirPath = path.join(__dirname, '../public/')
-const viewsPath = path.join(__dirname, '../templates/views')
-const partialsPaths = path.join(__dirname, '../templates/partials')
+const viewsPath = path.join(__dirname, '../templates/views/')
+const partialsPaths = path.join(__dirname, '../templates/partials/')
 
 // Setup handlebars engine and views location
 app.set('view engine', 'hbs')
@@ -96,6 +98,6 @@ app.get('*', (req, res) => {
 	})
 })
 
-app.listen(3000, () => {
-	console.log('Server is up on port 3000')
+app.listen(port, () => {
+	console.log(`Server is running on port ${port}`)
 })
